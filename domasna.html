@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Domasna</title>
+    <link rel=stylesheet type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="zatab3.png" >
+    <meta charset="UTF-8">
+    </head>
+    <body onload="initClock(),updateClock()">
+   
+        <div class=main>
+
+            <div><ul>
+                <li class="active"> <a href=domasna.html>Дома</a></li>
+                <li><a href=uslugi.html>Вештини</a></li>
+                <li><a href=galerija2.html>Проекти</a></li>
+                <li><a href=zanas.html>Јас</a></li>
+                <li><a href=forma.html>Контакт</a></li>
+            </ul></div>
+        </div >
+
+<div></div>
+            <h1 class="dobre"><span class="efekt">Д</span></h1>
+        <h1 class="dobre">    <span class="efekt">О</span></h1>
+        <h1 class="dobre">   <span class="efekt">Б</span></h1>
+        <h1 class="dobre">    <span class="efekt">Р</span></h1>
+        <h1 class="dobre">   <span class="efekt">Е</span></h1>
+        <h1 class="dobre">  <span class="efekt">Д</span></h1>
+        <h1 class="dobre">   <span class="efekt">О</span></h1>
+        <h1 class="dobre">   <span class="efekt">Ј</span></h1>
+        <h1 class="dobre">  <span class="efekt">Д</span></h1>
+        <h1 class="dobre">  <span class="efekt">О</span></h1>
+        <h1 class="dobre"> <span class="efekt">В</span></h1>
+        <h1 class="dobre">  <span class="efekt">Т</span></h1>
+        <h1 class="dobre"> <span class="efekt">Е</span></h1> <br>
+        <h3 class="pod"><span class="efekt"></span>У</h3>
+        <h3 class="pod"><span class="efekt"></span>Ж</h3>
+        <h3 class="pod"><span class="efekt"></span>И</h3>
+        <h3 class="pod"><span class="efekt"></span>В</h3>
+        <h3 class="pod"><span class="efekt"></span>А</h3>
+        <h3 class="pod"><span class="efekt"></span>Ј</h3>
+        <h3 class="pod"><span class="efekt"></span>Т</h3>
+        <h3 class="pod"><span class="efekt"></span>Е</h3>
+
+        </div>
+
+
+
+
+        <div class="datetime">
+        <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+            </div>
+            <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>  </div>
+        </div>
+     <script>
+        function updateClock(){
+          var now=new Date()
+          var dname= now.getDay(),
+              mo= now.getMonth(),
+              dnum= now.getDate(),
+              yr= now.getFullYear(),
+              hou= now.getHours(),
+              min= now.getMinutes(),
+              sec= now.getSeconds(),
+               pe="AM";
+            if(hou == 0){
+                hou=12;
+            }
+            if(hou > 12){
+                hou=hou-12;
+                pe = "PM";
+            }
+            Number.prototype.pad= function(digits){
+                for(var n= this.toString(); n.length <digits; n= 0+n);
+                    return n;
+            }
+
+            var months =["Janyary","February","March","April","May","June ","July","August","September","October","November","December"];
+            var week= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            var ids= ["dayname","month","daynum","year","hour","minutes","seconds","period"];
+            var values=[week[dname],months[mo],dnum.pad(2),yr,hou.pad(2), min.pad(2), sec.pad(2),pe];
+            for (var i=0;i<ids.length; i++)
+                document.getElementById(ids[i]).firstChild.nodeValue= values[i];
+
+
+        }
+         function initClock(){
+             updateClock();
+             window.setInterval("updateClock()", 1);
+         }
+        </script>
+    </body>
+</html>

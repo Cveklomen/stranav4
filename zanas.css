@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: CenturyGothic;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), URL("glavna.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+}
+
+.box{
+    width: 450px;
+    background: rgba(0,0,0,0.7);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: antiquewhite;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 darkblue, -1px 1px 0 black, 1px 1px 0 darkblue;
+    font-family: "CenturyGothic",sans-serif;
+}
+.box-img{
+ border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.box h1{
+    padding-top: 20px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+.box h5{
+    padding-top: 5px;
+     font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+.box p{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+.meni{
+    float:right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 60px;
+    
+}
+.meni li{
+    display: inline-block;
+}
+.meni li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+.meni li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.meni li.active a{
+     background-color: #fff;
+    color: #000;
+}
+.bukva:hover,.bukvee:hover{
+     animation: rubberband 1s linear;
+    color: #08fdd8;
+    transition: 0.3s ease-out;
+}
+@keyframes rubberband{
+    20%,50%,80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+         transform: translateY(-4px);
+    }
+    
+}
+.social li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+.social li a{
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    transition: all ease-in-out 0.25s;
+
+}
+.social li a:hover{
+    color: #b9b9b9;
+}
+body > div.box > ul > li:nth-child(5) > a > i{
+ font-size: 40px;
+}

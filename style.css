@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: CenturyGothic;
+}
+
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), URL("glavna.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+}
+ul{
+    float:right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: -18px;
+
+}
+ul li{
+    display: inline-block;
+
+}
+ul li a{
+    text-decoration: none;
+    font-family: "CenturyGothic";
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+.datetime{
+    color: #fff;
+    position: absolute;
+    font-family: "Segoe UI", sans-serif;
+    width: 340px;
+    padding: 15px 10px;
+    margin-top: 145px;
+    margin-left: 690px;
+    display: inline-block;
+}
+
+.date{
+    font-size: 20px;
+    font font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time span:not(:last-child){
+    position: relative;
+    margin:  0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.time span:last-child{
+   font-size: 40px;
+
+}
+#dayname, body > div.datetime > div.date{
+    display: none;
+}
+body > h1:nth-child(3) > span{
+    margin-left: 40px;
+}
+.dobre  {
+    color: white;
+    font-size: 4.8rem;
+    line-height: 50px;
+    position: relative;
+    margin-left: 5px;
+    margin-top: 25%;
+    display: inline-block;
+
+}
+h1:hover, h3:hover{
+     animation: rubberband 1s linear;
+ }
+.efekt:hover, .pod:hover {
+    animation: rubberband 1s linear;
+    color: #2e94e3;
+    transition: 0.2s ease-in;
+}
+
+@keyframes rubberband{
+    20%,50%,80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+.pod{
+
+    color: bisque;
+    font-size: 2rem;
+    line-height: 50px;
+    position: relative;
+    margin-left: 3px;
+    margin-top: 20px;
+    display: inline-block;
+}
+body > h3:nth-child(17){
+    margin-left: 70px;
+}
